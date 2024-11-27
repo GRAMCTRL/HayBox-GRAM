@@ -7,7 +7,7 @@ void FgcMode::UpdateDigitalOutputs(const InputState &inputs, OutputState &output
     outputs.dpadLeft = inputs.lf3;
     outputs.dpadRight = inputs.lf1;
     outputs.dpadDown = inputs.lf2;
-    outputs.dpadUp = inputs.lt1;
+    outputs.dpadUp = inputs.lt1 | inputs.lf5;
 
     // Menu keys
     outputs.start = inputs.mb1;

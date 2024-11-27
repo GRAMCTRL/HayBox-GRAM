@@ -20,6 +20,7 @@ GpioButtonMapping button_mappings[] = {
     { BTN_LF2, 3 },
     { BTN_LF3, 4 },
     { BTN_LF4, 5 },
+    { BTN_LF5, 1 },
 
     { BTN_LT1, 6 },
     { BTN_LT2, 7 },
@@ -67,7 +68,7 @@ void setup() {
     gpio_input.UpdateInputs(inputs);
 
     // Check bootsel button hold as early as possible for safety.
-    if (inputs.mb1) {
+    if (inputs.rt1) {
         reboot_bootloader();
     }
 

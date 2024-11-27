@@ -129,14 +129,14 @@ const Config default_config = {
         CommunicationBackendConfig {
             .backend_id = COMMS_BACKEND_CONFIGURATOR,
             .activation_binding_count = 1,
-            .activation_binding = { BTN_RT2 },
+            .activation_binding = { BTN_MB1 },
         }
     },
     .keyboard_modes_count = 1,
     .keyboard_modes = {
         KeyboardModeConfig {
             0,
-            22,
+            23,
             {
                 { BTN_LF4, HID_KEY_A },
                 { BTN_LF3, HID_KEY_B },
@@ -160,6 +160,7 @@ const Config default_config = {
                 { BTN_RT5, HID_KEY_T },
                 { BTN_RT1, HID_KEY_U },
                 { BTN_RT2, HID_KEY_V },
+                { BTN_LF5, HID_KEY_W },
             },
         },
     },

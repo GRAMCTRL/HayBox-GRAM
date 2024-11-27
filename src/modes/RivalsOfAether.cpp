@@ -29,7 +29,7 @@ void RivalsOfAether::UpdateDigitalOutputs(const InputState &inputs, OutputState 
     outputs.rightStickClick = inputs.rf8;
 
     // Activate D-Pad layer by holding Mod X + Mod Y.
-    if (inputs.lt1 && inputs.lt2) {
+    if ((inputs.lt1 && inputs.lt2) || inputs.lf5) {
         outputs.dpadUp = inputs.rt4;
         outputs.dpadDown = inputs.rt2;
         outputs.dpadLeft = inputs.rt3;
@@ -143,7 +143,7 @@ void RivalsOfAether::UpdateAnalogOutputs(const InputState &inputs, OutputState &
     }
 
     // Shut off C-stick when using D-Pad layer.
-    if (inputs.lt1 && inputs.lt2) {
+    if ((inputs.lt1 && inputs.lt2) || inputs.lf5) {
         outputs.rightStickX = 128;
         outputs.rightStickY = 128;
     }
