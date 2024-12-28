@@ -32,6 +32,15 @@ void Melee20Button::UpdateDigitalOutputs(const InputState &inputs, OutputState &
     outputs.triggerRDigital = inputs.rf5;
     outputs.start = inputs.mb1;
 
+    // Hidden Buttons for remapp.ing options
+    outputs.leftStickClick = inputs.lf6;
+    outputs.rightStickClick = inputs.lf7;
+    outputs.capture = inputs.lf8;
+    outputs.dpadUp = inputs.lf9;
+    outputs.dpadDown = inputs.lf10;
+    outputs.dpadLeft = inputs.lf11;
+    outputs.dpadRight = inputs.lf12;
+
     // Activate D-Pad layer by holding Mod X + Mod Y or Nunchuk C button.
     if ((inputs.lt1 && inputs.lt2) || inputs.nunchuk_c || inputs.lf5) {
         outputs.dpadUp = inputs.rt4;
