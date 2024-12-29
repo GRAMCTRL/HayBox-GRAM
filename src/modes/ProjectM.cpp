@@ -49,10 +49,16 @@ void ProjectM::UpdateDigitalOutputs(const InputState &inputs, OutputState &outpu
     // layer.
     outputs.dpadUp = outputs.dpadUp || inputs.rf8;
 
-    if (inputs.mb3)
-        outputs.dpadLeft = true;
-    if (inputs.mb2)
-        outputs.dpadRight = true;
+    // Hidden Buttons for remapp.ing options
+    outputs.leftStickClick = inputs.lf6;
+    outputs.rightStickClick = inputs.lf7;
+    outputs.capture = inputs.lf8;
+    outputs.dpadUp = inputs.lf9;
+    outputs.dpadDown = inputs.lf10;
+    outputs.dpadLeft = inputs.lf11;
+    outputs.dpadRight = inputs.lf12;
+    outputs.select = inputs.mb2;
+    outputs.home = inputs.mb3;
 }
 
 void ProjectM::UpdateAnalogOutputs(const InputState &inputs, OutputState &outputs) {
