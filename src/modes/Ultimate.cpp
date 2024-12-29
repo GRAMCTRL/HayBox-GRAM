@@ -17,8 +17,6 @@ void Ultimate::UpdateDigitalOutputs(const InputState &inputs, OutputState &outpu
     outputs.triggerLDigital = inputs.lf4;
     outputs.triggerRDigital = inputs.rf5;
     outputs.start = inputs.mb1;
-    outputs.select = inputs.mb3;
-    outputs.home = inputs.mb2;
 
     // Turn on D-Pad layer by holding Mod X + Mod Y or Nunchuk C button.
     if ((inputs.lt1 && inputs.lt2) || inputs.nunchuk_c || inputs.lf5) {
@@ -27,6 +25,17 @@ void Ultimate::UpdateDigitalOutputs(const InputState &inputs, OutputState &outpu
         outputs.dpadLeft = inputs.rt3;
         outputs.dpadRight = inputs.rt5;
     }
+
+        // Hidden Buttons for remapp.ing options
+    outputs.leftStickClick = inputs.lf6;
+    outputs.rightStickClick = inputs.lf7;
+    outputs.capture = inputs.lf8;
+    outputs.dpadUp = inputs.lf9;
+    outputs.dpadDown = inputs.lf10;
+    outputs.dpadLeft = inputs.lf11;
+    outputs.dpadRight = inputs.lf12;
+    outputs.select = inputs.mb2;
+    outputs.home = inputs.mb3;
 }
 
 void Ultimate::UpdateAnalogOutputs(const InputState &inputs, OutputState &outputs) {
