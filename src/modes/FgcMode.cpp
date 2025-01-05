@@ -7,13 +7,13 @@ void FgcMode::UpdateDigitalOutputs(const InputState &inputs, OutputState &output
     outputs.dpadLeft = inputs.lf3;
     outputs.dpadRight = inputs.lf1;
     outputs.dpadDown = inputs.lf2;
-    outputs.dpadUp = inputs.lt1 | inputs.lf5;
+    outputs.dpadUp = inputs.lt1;
 
     // Menu keys
     outputs.start = inputs.mb1;
     outputs.select = inputs.rt3;
     outputs.home = inputs.rt2;
-    outputs.leftStickClick = inputs.lt2;
+    outputs.leftStickClick = inputs.lf4;
     outputs.rightStickClick = inputs.rt1;
 
     // Right hand bottom row
