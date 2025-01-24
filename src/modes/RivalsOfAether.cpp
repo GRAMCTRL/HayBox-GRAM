@@ -23,10 +23,17 @@ void RivalsOfAether::UpdateDigitalOutputs(const InputState &inputs, OutputState 
     }
     outputs.triggerRDigital = inputs.rf5;
     outputs.start = inputs.mb1;
-    outputs.select = inputs.mb3;
-    outputs.home = inputs.mb2;
     outputs.leftStickClick = inputs.rf7;
     outputs.rightStickClick = inputs.rf8;
+
+    // Hidden Buttons for remapp.ing options
+    outputs.capture = inputs.lf8;
+    outputs.dpadUp = inputs.lf9;
+    outputs.dpadDown = inputs.lf10;
+    outputs.dpadLeft = inputs.lf11;
+    outputs.dpadRight = inputs.lf12;
+    outputs.select = inputs.mb2;
+    outputs.home = inputs.mb3;
 
     // Activate D-Pad layer by holding Mod X + Mod Y.
     if ((inputs.lt1 && inputs.lt2) || inputs.lf5) {
@@ -67,7 +74,7 @@ void RivalsOfAether::UpdateAnalogOutputs(const InputState &inputs, OutputState &
             }
         }
 
-        if(directions.vertical) {
+        if (directions.vertical) {
             outputs.leftStickY = 128 + (directions.y * 44);
             // MX Vertical Tilts
             if (inputs.rt1) {
@@ -109,7 +116,7 @@ void RivalsOfAether::UpdateAnalogOutputs(const InputState &inputs, OutputState &
             outputs.leftStickX = 128 + (directions.x * 44);
         }
 
-        if(directions.vertical) {
+        if (directions.vertical) {
             outputs.leftStickY = 128 + (directions.y * 67);
         }
 

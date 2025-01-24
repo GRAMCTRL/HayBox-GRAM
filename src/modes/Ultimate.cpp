@@ -26,7 +26,7 @@ void Ultimate::UpdateDigitalOutputs(const InputState &inputs, OutputState &outpu
         outputs.dpadRight = inputs.rt5;
     }
 
-        // Hidden Buttons for remapp.ing options
+    // Hidden Buttons for remapp.ing options
     outputs.leftStickClick = inputs.lf6;
     outputs.rightStickClick = inputs.lf7;
     outputs.capture = inputs.lf8;

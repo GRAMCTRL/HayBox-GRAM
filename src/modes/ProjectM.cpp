@@ -53,7 +53,6 @@ void ProjectM::UpdateDigitalOutputs(const InputState &inputs, OutputState &outpu
     outputs.leftStickClick = inputs.lf6;
     outputs.rightStickClick = inputs.lf7;
     outputs.capture = inputs.lf8;
-    outputs.dpadUp = inputs.lf9;
     outputs.dpadDown = inputs.lf10;
     outputs.dpadLeft = inputs.lf11;
     outputs.dpadRight = inputs.lf12;

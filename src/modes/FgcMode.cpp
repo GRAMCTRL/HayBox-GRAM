@@ -27,6 +27,9 @@ void FgcMode::UpdateDigitalOutputs(const InputState &inputs, OutputState &output
     outputs.y = inputs.rf6;
     outputs.buttonR = inputs.rf7;
     outputs.buttonL = inputs.rf8;
+
+    // Hidden Buttons for remapp.ing options
+    outputs.capture = inputs.lf8;
 }
 
 void FgcMode::UpdateAnalogOutputs(const InputState &inputs, OutputState &outputs) {
