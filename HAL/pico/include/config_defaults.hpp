@@ -131,18 +131,18 @@ const Config default_config = {
             .backend_id = COMMS_BACKEND_NES,
             .default_mode_config = 1,
             .activation_binding_count = 1,
-            .activation_binding = { BTN_LT1 }, //Mod X
+            .activation_binding = { BTN_LT1 },
         },
         CommunicationBackendConfig {
             .backend_id = COMMS_BACKEND_SNES,
             .default_mode_config = 1,
             .activation_binding_count = 1,
-            .activation_binding = { BTN_LT2 }, //Mod Y
+            .activation_binding = { BTN_LT2 },
         },
         CommunicationBackendConfig {
             .backend_id = COMMS_BACKEND_CONFIGURATOR,
             .activation_binding_count = 1,
-            .activation_binding = { BTN_RT2 }, //C-Down
+            .activation_binding = { BTN_MB1 },
         }
     },
     .keyboard_modes_count = 1,
