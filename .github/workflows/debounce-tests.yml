@@ -1,0 +1,18 @@
+name: Debounce tests
+
+on: [push, pull_request]
+
+permissions:
+  contents: read
+
+jobs:
+  debounce:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Build and run debounce regression tests
+        run: |
+          g++ -std=c++17 -Wall -Wextra -Werror \
+            -I test/debounce/stubs -I HAL/pico/include \
+            test/debounce/debounce_test.cpp -o "$RUNNER_TEMP/haybox-debounce-test"
+          "$RUNNER_TEMP/haybox-debounce-test"
